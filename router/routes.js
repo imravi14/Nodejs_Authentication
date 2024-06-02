@@ -25,11 +25,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/register", GET_REGISTER);
+router.get("/", GET_REGISTER);
 router.get("/login", GET_LOGIN);
 
 // register post
-router.post("/register", upload.single("file"), POST_REGISTER);
+router.post("/", upload.single("file"), POST_REGISTER);
 
 // post login
 router.post("/LOGIN", POST_LOGIN);
